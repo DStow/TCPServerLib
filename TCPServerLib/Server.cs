@@ -7,9 +7,6 @@ namespace TCPServerLib
 {
     public class Server
     {
-    }
-    public class TCPServer
-    {
         public delegate string MessageReceivedDelegate(string message);
 
         private int _port = 0;
@@ -20,7 +17,7 @@ namespace TCPServerLib
 
         private Thread _serverThread;
 
-        public TCPServer(int port, MessageReceivedDelegate messageRecievedEvent)
+        public Server(int port, MessageReceivedDelegate messageRecievedEvent)
         {
             _port = port;
             _receivedEvent = messageRecievedEvent;
