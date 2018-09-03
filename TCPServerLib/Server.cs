@@ -7,7 +7,7 @@ namespace TCPServerLib
 {
     public class Server
     {
-        public delegate string MessageReceivedDelegate(string message);
+        public delegate string MessageReceivedDelegate(string message, string ip);
 
         private int _port = 0;
         private MessageReceivedDelegate _receivedEvent;
@@ -54,7 +54,7 @@ namespace TCPServerLib
                         Console.WriteLine("Received: " + data);
 
                         // Work with the data
-                        data = _receivedEvent(data);
+                        data = _receivedEvent(data, client.Client.RemoteEndPoint.ToString());
 
                         byte[] msg = Encoding.ASCII.GetBytes(data);
 

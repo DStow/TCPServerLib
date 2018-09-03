@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>DStow.TCPServer</id>
+    <version>1.0.0</version>
+    <authors>DStow</authors>
+    <owners>DStow</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A small wrapper for working with a TCP Server</description>
+    <releaseNotes>Initial Release</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>TCP Server</tags>
+    <dependencies>
+      <dependency id="SampleDependency" version="1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="TCPServerLib/bin/release/netstandard2.0/TCPServerLib.dll" />
+  </files>
+</package>
